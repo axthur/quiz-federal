@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
                 const queryString = `resultado=${encodeURIComponent(JSON.stringify(nome))}`;
-                window.location.href = `/pages/resultado.html?${queryString}`
+                window.location.href = `resultado.html?${queryString}`
             }
         })
     });
