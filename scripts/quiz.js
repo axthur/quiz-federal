@@ -11,13 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Todas as perguntas do quiz
     const questions = [
         "Qual dessas matérias da escola você prefere?", // 0
-        "Qual dessas matérias do curso você prefere?" // 1
+        "Qual dessas matérias do curso você prefere?", // 1
+        "Qual dessas linguagens de programação você prefere?", // 2
+        "Qual dessas áreas você prefere atuar?", //3
+        "Qual desses sistemas operacionais você prefere?" //4
     ];
 
     // Opções de resposta de cada pergunta
     const answers = [
         ["Matemática", "Português", "Biologia", "Geografia"], // 0
-        ["Programação WEB", "Programação Java", "Projeto de Software", "Rede de Computadores"] // 1
+        ["Programação WEB", "Programação Java", "Projeto de Software", "Rede de Computadores"], // 1
+        ["Java", "JavaScript", "C", "Python"], // 2
+        ["Front-end", "Back-end", "Documentação", "Gestão"], // 3
+        ["Windows", "Linux", "macOS", "UNIX"] // 4
     ];
 
     // Carrega a questão
@@ -29,17 +35,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Indentifica qual a pergunta atual
     let i = 0;
 
+    // Lista de IDs
+    const Luciano = 0;
+    const Felippe = 1;
+    const Edson = 2;
+    const Marcos = 3;
+    const Cassia = 4;
+
     // Lista de professores disponíveis
     const professores = [
-        "Luciano", // 0
-        "Felippe", // 1
-        "Edson", // 2
-        "Marcos" // 3
+        "Luciano", 
+        "Felippe",
+        "Edson",
+        "Marcos",
+        "Cássia"
     ];
 
     // Lista de pontos em cada professor
     const points = [
-        0, 0, 0, 0
+        0, 0, 0, 0, 0
     ];
 
     // Add event listener em todos os botões
@@ -49,18 +63,115 @@ document.addEventListener('DOMContentLoaded', function () {
             // Pega o ID da opção
             const data = parseInt(this.getAttribute('id'));
 
+            // Pega a opção
             switch (data) {
+                // Opção 0
                 case 0:
-                    points[0]++;
+                    switch (i) {
+                        // Matemática
+                        case 0:
+                            points[Luciano]++;
+                            break;
+
+                        // Programação WEB
+                        case 1:
+                            points[Luciano]++;
+                            break;
+
+                        // Java
+                        case 2:
+                            break;
+
+                        // Front-end
+                        case 3:
+                            break;
+
+                        // Windows
+                        case 4:
+                            break;
+                    }
                     break;
+
+                // Opção 1
                 case 1:
-                    points[1]++;
+                    switch (i) {
+                        // Português
+                        case 0:
+                            break;
+
+                        // Programação Java
+                        case 1:
+                            points[Felippe]++;
+                            break;
+
+                        // JavaScript
+                        case 2:
+                            break;
+
+                        // Front-end
+                        case 3:
+                            break;
+
+                        // Windows
+                        case 4:
+                            points[Cassia]++;
+                            break;
+                    }
                     break;
+
+                // Opção 2
                 case 2:
-                    points[2]++;
+                    switch (i) {
+                        // Biologia
+                        case 0:
+                            break;
+
+                        // Projeto de Software
+                        case 1:
+                            points[Marcos]++;
+                            points[Cassia]++;
+                            break;
+
+                        // C
+                        case 2:
+                            break;
+
+                        // Back-end
+                        case 3:
+                            break;
+
+                        // Linux
+                        case 4:
+                            break;
+                    }
                     break;
+
+                // Opção 3
                 case 3:
-                    points[3]++;
+                    switch (i) {
+                        // Geografia
+                        case 0:
+                            break;
+
+                        // Rede de Computadores
+                        case 1:
+                            points[Edson]++;
+                            break;
+
+                        // Python
+                        case 2:
+                            points[Luciano]++;
+                            break;
+
+                        // Gestão
+                        case 3:
+                            points[Cassia]++;
+                            break;
+
+                        // UNIX
+                        case 4:
+                            break;
+                    }
                     break;
             }
 
