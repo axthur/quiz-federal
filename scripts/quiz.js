@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Opções de resposta de cada pergunta
     const answers = [
-        ["Matemática", "Português", "Biologia", "Geografia"], // 0
-        ["Programação WEB", "Programação Java", "Projeto de Software", "Rede de Computadores"], // 1
+        ["Matemática", "Português", "Biologia", "História"], // 0
+        ["Programação WEB", "Programação Java/Portugol", "Projeto de Software", "Fundamentos de Hardware"], // 1
         ["Java", "JavaScript", "C", "Python"], // 2
-        ["Front-end", "Back-end", "Documentação", "Gestão"], // 3
+        ["Front-end", "Back-end", "Documentação", "Administração"], // 3
         ["Windows", "Linux", "macOS", "UNIX"] // 4
     ];
 
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Lista de professores disponíveis
     const professores = [
-        "Luciano", 
+        "Luciano",
         "Felippe",
         "Edson",
-        "Marcos",
+        "Marcos Vinícius",
         "Cássia"
     ];
 
@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Matemática
                         case 0:
                             points[Luciano]++;
+                            points[Felippe]++;
                             break;
 
                         // Programação WEB
@@ -80,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Java
                         case 2:
+                            points[Felippe]++;
                             break;
 
                         // Front-end
@@ -88,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Windows
                         case 4:
+                            points[Felippe]++;
+                            points[Cassia]++;
                             break;
                     }
                     break;
@@ -99,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         case 0:
                             break;
 
-                        // Programação Java
+                        // Programação Java/Portugol
                         case 1:
                             points[Felippe]++;
                             break;
@@ -108,11 +112,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         case 2:
                             break;
 
-                        // Front-end
+                        // Back-end
                         case 3:
+                            points[Luciano]++;
+                            points[Felippe]++;
                             break;
 
-                        // Windows
+                        // Linux
                         case 4:
                             points[Cassia]++;
                             break;
@@ -136,11 +142,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         case 2:
                             break;
 
-                        // Back-end
+                        // Documentação
                         case 3:
                             break;
 
-                        // Linux
+                        // macOS
                         case 4:
                             break;
                     }
@@ -149,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Opção 3
                 case 3:
                     switch (i) {
-                        // Geografia
+                        // História
                         case 0:
                             break;
 
@@ -163,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             points[Luciano]++;
                             break;
 
-                        // Gestão
+                        // Administração
                         case 3:
                             points[Cassia]++;
                             break;
