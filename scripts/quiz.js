@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
         "Qual dessas matérias da escola você prefere?", // 0
         "Qual dessas matérias do curso você prefere?", // 1
         "Qual dessas linguagens de programação você prefere?", // 2
-        "Qual dessas áreas você prefere atuar?", //3
-        "Qual desses sistemas operacionais você prefere?" //4
+        "Qual dessas áreas você prefere atuar?", // 3
+        "Qual desses sistemas operacionais você prefere?" // 4
     ];
 
     // Opções de resposta de cada pergunta
     const answers = [
-        ["Matemática", "Português", "Biologia", "História"], // 0
+        ["Matemática", "Português", "Geografia", "História"], // 0
         ["Programação WEB", "Programação Java/Portugol", "Projeto de Software", "Fundamentos de Hardware"], // 1
         ["Java", "JavaScript", "C", "Python"], // 2
         ["Front-end", "Back-end", "Documentação", "Administração"], // 3
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         case 0:
                             points[Luciano]++;
                             points[Felippe]++;
+                            points[Marcos]++;
                             break;
 
                         // Programação WEB
@@ -81,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Java
                         case 2:
+                            points[Marcos]++;
                             points[Felippe]++;
                             break;
 
@@ -90,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Windows
                         case 4:
+                            points[Marcos]++;
                             points[Felippe]++;
                             points[Cassia]++;
                             break;
@@ -128,8 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Opção 2
                 case 2:
                     switch (i) {
-                        // Biologia
+                        // Geografia
                         case 0:
+                            points[Marcos]++;
                             break;
 
                         // Projeto de Software
@@ -144,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         // Documentação
                         case 3:
+                            points[Marcos]++;
                             break;
 
                         // macOS
