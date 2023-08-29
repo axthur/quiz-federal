@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('./assets/background.png');
+    background: url('/assets/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,9 +20,12 @@ header {
 footer {
     background-color: #467a20;
     color: #fff;
-    padding: 20px 0;
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    justify-content: flex-end;
 }
 
 /*Classes*/
